@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+
+{% include "header.html" %}
+
+  <!-- TRADES GRID -->
+  <h3>Strategies</h3>
+  <table id="coin-table" class="table table-sm table-dark">
+    <tr class="table-header">
+      <th></th>
+      <th>Extend</th>
+      <th>this</th>
+      <th>header</th>
+      <th>Profit</th>
+    </tr>
+    <tbody class="table-body">
+    {% set count = 1 %}
+    {% for strat_obj in strategies %}
+    <tr>
+      <td>
+        {{ loop.index }}
+      </td>
+      {% for strat in strat_obj.strategy %}
+      <td>
+        {{ strat }}
+      </td>
+      {% endfor %}
+      <td>
+        {{ strat_obj.value }}
+      </td>
+    </tr>
+    {% set count = count + 1 %}
+    {% endfor %}
+    </tbody>
+  </table>
+
+</body>

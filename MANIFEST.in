@@ -1,0 +1,3 @@
+graft cryptotraders/static
+graft cryptotraders/templates
+global-exclude *.pyc
