@@ -117,10 +117,10 @@ textarea {
   top: 10px;
   z-index: 100;
 }
+
 /*
  * Mobile
  */
-
 .mobile-nav-button {
   display: none;
 }
@@ -130,11 +130,6 @@ textarea {
 
 .mobile-site-nav .nav-items {
   display: none;
-}
-
-
-/*** GRID ELEMENTS ***/
-.coin-table {
 }
 
 @media screen and (max-width: 820px) {
@@ -151,11 +146,7 @@ textarea {
   }
 
   .mobile-site-nav .nav-items-toggle {
-    /* display: inline-block; */
-    /* position: relative; */
     width: 100%;
-    /* right: 0; */
-    /* top: 0; */
   }
   .mobile-site-nav .nav-items-toggle ul {
     list-style: none;
@@ -186,12 +177,10 @@ textarea {
     float: right;
     display: block;
     right: 10px;
-    /* margin-right: 10px; */
   }
   .nav-arrow {
     color: #fff;
     background-color: #404040;
     padding: 8px 16px;
   }
-
 }

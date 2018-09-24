@@ -9,17 +9,12 @@
 {% include "header.html" %}
 
   <!-- TRADES GRID -->
-  <h3>Strategies</h3>
-  <table id="coin-table" class="table table-sm table-dark">
+  <h3>これはヘッダーのところです。</h3>
+  <table id="coin-table" class="table table-sm table-hover">
     <tr class="table-header">
-      <th></th>
-      <th>Extend</th>
-      <th>this</th>
-      <th>header</th>
-      <th>Profit</th>
     </tr>
     <tbody class="table-body">
-    {% set count = 1 %}
+
     {% for strat_obj in strategies %}
     <tr>
       <td>
@@ -27,15 +22,19 @@
       </td>
       {% for strat in strat_obj.strategy %}
       <td>
-        {{ strat }}
+        {% if strat.name %}
+          <span>{{ strat.name }} {{ strat.key0 }}/{{ strat.key1 }}</span></br>
+          <span>ask  {{ strat.ask }}</span> </br>
+          <span>bid  {{ strat.bid }}</span>
+        {% endif %}
       </td>
       {% endfor %}
       <td>
-        {{ strat_obj.value }}
+        value {{ strat_obj.value }}
       </td>
     </tr>
-    {% set count = count + 1 %}
     {% endfor %}
+
     </tbody>
   </table>
 
