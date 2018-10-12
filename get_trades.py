@@ -3,14 +3,6 @@ import ast
 import operator, re
 import json
 
-
-def _get_raw_info_origin():
-    url = "http://ec2-18-236-98-219.us-west-2.compute.amazonaws.com/bitcoin_arbitrager"
-    raw_data = requests.get(url).json()
-    # bring this raw_data on internet, please
-    return raw_data
-
-
 #def get_raw_info():
 #    raw_data = _get_raw_info_origin()
 #    raw_data['strategies'] = {
@@ -46,7 +38,7 @@ class Strategy:
         self.value = value
 
 def get_raw_info():
-    url = "http://ec2-18-236-98-219.us-west-2.compute.amazonaws.com/bitcoin_arbitrager"
+    url = "removed for security"
     raw_data = requests.get(url).json()
     strategies = sorted(raw_data['strategies'].items(), key=operator.itemgetter(1), reverse=True)
     prices = raw_data['prices']
